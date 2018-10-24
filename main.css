@@ -22,12 +22,22 @@ body {
 
 }
 
+.img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: .8;
+}
+
 #videos{
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100%;
+  backface-visibility: hidden;
 }
 
 .content{
