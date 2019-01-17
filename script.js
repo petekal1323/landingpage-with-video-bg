@@ -1,4 +1,4 @@
-var video_list = ["img/Beach.mp4", "img/Clockwise.mp4", "img/Road-candies.mp4"];
+var video_list = ["img/Beach.mp4", "img/Very-Slow-Bokeh.mp4", "img/Road-candies.mp4"];
 var video_index = 0;
 var video_player = null;
 
@@ -22,23 +22,18 @@ function onVideoEnded(){
 
 msieversion();
 
-function msieversion()
-{
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
+function msieversion(){
+  var sUserAgn = navigator.userAgent;
 
-    if (msie > -1) // If Internet Explorer, return version number
-    {
-    console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+  if (sUserAgn.indexOf("Trident") > -1){
+    console.log("You're using IE (aka: Internet Exploder) the worst browser ever!");
     $("#videos").hide();
     $(".img").show();
-    }
-    else  // If another browser, return 0
-    {
-      console.log('otherbrowser');
-      $("#videos").show();
-      $(".img").hide();
-    }
-
-    return false;
+  }
+  else {
+    console.log('Anything is better than IE');
+    $("#videos").show();
+    $(".img").hide();
+  }
+  return false;
 }
