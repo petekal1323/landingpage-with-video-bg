@@ -1,4 +1,4 @@
-var video_list = ["img/Beach.mp4", "img/Drip_coffee.mp4", "img/Road-candies.mp4"];
+var video_list = ["img/Beach.mp4", "img/Clockwise.mp4", "img/Road-candies.mp4"];
 var video_index = 0;
 var video_player = null;
 
