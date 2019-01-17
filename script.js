@@ -27,7 +27,7 @@ function msieversion()
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
 
-    if (msie > 0) // If Internet Explorer, return version number
+    if (msie > -1) // If Internet Explorer, return version number
     {
     console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
     $("#videos").hide();
